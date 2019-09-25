@@ -10,7 +10,7 @@ app.use((req, res, next) => {
   console.log(`${req.method} ${req.hostname}${req.originalUrl} from ${host} (ip: ${req.ip}, ips: [${req.ips}])`);
   next();
 });
-app.use('/', express.static('./build'));
+app.use('/', express.static('./docs'));
 
 console.log('Serving on 0.0.0.0:6262!');
 app.listen(6262, '0.0.0.0');
