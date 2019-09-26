@@ -100,9 +100,11 @@ export default Vue.component('my-timeline', {
         target.endDate = new Date(target.endDate);
       target.dependency = '';
       target.duration = target.endDate ? getDays(target.startDate, target.endDate) : 0;
+      target.id = target.id + 1024;
       goal.subTasks.push(target);
     }
     this.data = data;
+    console.log(data);
   },
   watch: {
 
